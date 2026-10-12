@@ -1,0 +1,23 @@
+.hero-photo {
+  background-image:
+    linear-gradient(90deg, #08090b 0%, transparent 30%, transparent 72%, #08090b 100%),
+    linear-gradient(0deg, #08090b 0%, transparent 24%, transparent 82%, #08090b 100%),
+    url("assets/hero.jpeg");
+  animation: hero-image-fade-in 900ms ease-out both;
+}
+
+@keyframes hero-image-fade-in {
+  from {
+    filter: contrast(1.04) opacity(0);
+  }
+
+  to {
+    filter: contrast(1.04) opacity(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-photo {
+    animation: none;
+  }
+}

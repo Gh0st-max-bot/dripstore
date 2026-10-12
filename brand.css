@@ -1,0 +1,85 @@
+.topbar .brand {
+  width: auto;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-image {
+  position: relative;
+  display: block;
+  width: 54px;
+  height: 54px;
+  flex: 0 0 54px;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #fff;
+  animation: brand-fade-in 900ms ease-out 150ms both;
+}
+
+.brand-image img {
+  position: absolute;
+  top: -114%;
+  left: -38%;
+  width: 176%;
+  max-width: none;
+  height: auto;
+}
+
+.brand-type {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 0.8;
+  animation: brand-fade-in 900ms ease-out 250ms both;
+}
+
+@keyframes brand-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.brand-type .brand-word {
+  font-size: 36px;
+}
+
+.brand-type .brand-sub {
+  margin: 7px 0 0 27px;
+}
+
+@media (max-width: 760px) {
+  .topbar .brand {
+    width: auto;
+    gap: 7px;
+  }
+
+  .brand-image {
+    width: 42px;
+    height: 42px;
+    flex-basis: 42px;
+    border-radius: 10px;
+  }
+
+  .brand-type .brand-word {
+    font-size: 30px;
+  }
+
+  .brand-type .brand-sub {
+    margin: 5px 0 0 22px;
+    font-size: 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-image,
+  .brand-type {
+    animation: none;
+  }
+}

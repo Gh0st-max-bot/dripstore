@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08090b">
+  <meta name="description" content="DRIP STORE — premium streetwear. Quality fits. Real style. Built for everyday legends.">
+  <title>DRIP STORE — Drip Different</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="drip.css">
+  <link rel="stylesheet" href="hero-image.css">
+  <link rel="stylesheet" href="brand.css">
+</head>
+<body>
+  <main class="hero" id="home">
+    <div class="hero-photo" aria-hidden="true"></div>
+    <div class="shade" aria-hidden="true"></div>
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="Drip Store home">
+        <span class="brand-image"><img src="assets/logo.jpeg" alt=""></span>
+        <span class="brand-type">
+          <span class="brand-word">DRIP</span>
+          <span class="brand-sub">STORE</span>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="active" href="index.html">Home</a>
+        <a href="about.html">About</a>
+      </nav>
+      <button class="search-toggle icon-button" id="searchToggle" aria-label="Open search" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.7"></circle><path d="m16 16 5 5"></path></svg>
+      </button>
+    </header>
+
+    <form class="search-panel" id="searchPanel" role="search">
+      <label class="sr-only" for="siteSearch">Search the store</label>
+      <input id="siteSearch" type="search" placeholder="Search streetwear..." autocomplete="off">
+      <button type="submit">Search</button>
+    </form>
+
+    <section class="hero-copy" aria-labelledby="heroTitle">
+      <p class="eyebrow">PREMIUM STREETWEAR</p>
+      <h1 id="heroTitle">DRIP <span>DIFFERENT</span></h1>
+      <p class="intro">Quality fits. Real style.<br>Built for everyday legends.</p>
+      <a class="shop-button" href="about.html">SHOP NOW <span aria-hidden="true">⟶</span></a>
+    </section>
+
+    <aside class="social-rail" aria-label="Social media">
+      <a class="instagram-mark" href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Follow us on Instagram">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle class="dot" cx="18" cy="6.5" r="1"></circle></svg>
+      </a>
+      <p>Follow us<br>on Instagram</p>
+      <span class="rail-line"></span>
+      <button class="video-button" id="videoButton" aria-label="Add or view video"><span>▶</span></button>
+      <p>Add Video</p>
+    </aside>
+    <div class="mobile-social"><a href="https://www.instagram.com/" target="_blank" rel="noreferrer">Instagram ↗</a><button id="mobileVideoButton">Add Video</button></div>
+  </main>
+
+  <dialog class="video-dialog" id="videoDialog">
+    <button class="dialog-close" id="closeVideo" aria-label="Close dialog">×</button>
+    <h2>DRIP STORE VIDEO</h2>
+    <p>Add your brand video by editing the video source in <code>drip.js</code>.</p>
+    <video id="brandVideo" controls playsinline hidden></video>
+    <p class="small-note">Tip: place your video in the <code>assets</code> folder and set its path in the script.</p>
+  </dialog>
+  <script src="drip.js"></script>
+</body>
+</html>
